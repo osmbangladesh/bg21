@@ -600,7 +600,8 @@ color:#fff;
 /*Team*/ 
 #our-team {
   padding: 100px 0;
-  background: url('../images/img2.jpg');  
+  /*background: url('../images/img2.jpg');*/
+  background: #222222;  
 }
 #our-team .team-member {
   padding: 0;  
