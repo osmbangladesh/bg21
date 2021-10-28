@@ -17,6 +17,12 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->       
     <link rel="shortcut icon" href="images/ico/favicon.ico"> 
+
+
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+
 </head> 
 
 <body id="home">
@@ -85,8 +91,8 @@
 
             <div class="row">
                 <div class="col-sm-6 wow fadeInLeft">
-                    <!-- <div id="map"></div> -->
-                    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=78.35449218750001%2C16.446622271646643%2C102.8759765625%2C28.63274679922588&amp;layer=mapnik&amp;marker=22.674847351188536%2C90.615234375" style="border: 1px solid black"></iframe>
+                    <div id="map"></div>
+
                   <!-- <img class="img-responsive" src="images/about.png" alt=""> -->
                 </div>
 
@@ -463,5 +469,55 @@
     <script src="js/jquery.inview.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/custom-scripts.js"></script>
+
+
+    <script type="text/javascript" src="bhola.js"></script>
+
+    <script>
+
+    var map = L.map('map').setView([23.881, 90.736],6);
+
+    map.createPane('labels');
+
+    // This pane is above markers but below popups
+    map.getPane('labels').style.zIndex = 650;
+
+    // Layers in this pane are non-interactive and do not obscure mouse/touch events
+    map.getPane('labels').style.pointerEvents = 'none';
+
+    var cartodbAttribution = '&copy;  <a href="http://www.bbs.gov.bd/">BBS</a>, Basemap <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>  contributors, &copy; <a href="https://www.hotosm.org/">HOT</a>';
+
+    var positron = L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+        attribution: cartodbAttribution
+    }).addTo(map);
+
+
+ geojson= L.geoJSON(json_bhola_1, {
+onEachFeature: colorlayer,
+style: {
+    color: "red",
+    opacity: 0.6,
+    fillColor: '#f5e905',
+    fillOpacity: 0
+}
+}).addTo(map);
+function colorlayer(feature, layer) {
+layer.on('mouseover', function (e) {
+    layer.setStyle({
+        fillOpacity: 0.6
+    });
+});
+layer.on('mouseout', function (e) {
+    layer.setStyle({
+        fillOpacity: 0
+    });
+});
+}
+
+    geojson.eachLayer(function (layer) {
+        layer.bindPopup(layer.feature.properties.UPAZILA_NA);
+    });
+
+</script>
 </body>
 </html>
