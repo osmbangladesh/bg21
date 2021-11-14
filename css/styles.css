@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Raleway:400,700,500);
+/*@import url(https://fonts.googleapis.com/css2?family=Raleway:400,700,500);*/
 /*/https://fonts.googleapis.com/css?family=Open+Sans:700,600,800,400*/
 /*<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">*/
 /*
@@ -8,6 +8,8 @@ Author URL: http://webthemez.com
 /*************************
 *******Typography******
 **************************/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:400,700,500');
+
 body {
   padding-top: 100px;
   background: #fff;
