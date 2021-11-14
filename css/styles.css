@@ -87,11 +87,11 @@ text-align:center;
   border-radius: 0;
 }
 .btn.btn-primary {
-  background: #CD4F00;
+  background: red;
 }
 .btn.btn-primary:hover,
 .btn.btn-primary:focus {
-  background: #FF8A41;
+  background: #fc4949;
 }
 .listarrow{
 padding:0px;
@@ -954,3 +954,11 @@ padding: 7px 0 0;
       width: 450px;
       height: 450px;
     }
+
+#center2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  
+}
