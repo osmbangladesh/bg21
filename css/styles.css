@@ -115,7 +115,7 @@ color: red;
   border-bottom: 1px solid #eee;
   margin-bottom: 15px;
   position: relative;
-  color: #fff;
+  color: #000;
 }
 .column-title:after {
   content: " ";
@@ -559,7 +559,7 @@ transition: all .2s ease-in-out;
 margin-bottom: 15px;
 }
 #testimonial {
-  background: #222222;
+  /*background: #222222;*/
   background-size: cover;
   padding: 100px 0;
   color: #fff;
@@ -588,24 +588,24 @@ margin: 0 8px;
 }
 #about {
   padding: 100px 0;
-  background: #222222;
+  /*background: #222222;*/
   /*background: url('../images/img2.jpg'); */   
   background-size: cover;  };
 }
 #about .column-title{
-color:#fff;
+color:#000;
 }
 #about p{
-color:#fff;
+color:#000;
 }
 #about .listarrow li{
-color:#fff;
+color:#000;
 }
 /*Team*/ 
 #our-team {
   padding: 100px 0;
   /*background: url('../images/img2.jpg');*/
-  background: #222222;  
+  /*background: #222222;*/  
 }
 #our-team .team-member {
   padding: 0;  
@@ -614,7 +614,7 @@ color:#fff;
   margin: 0;
 }
 #our-team .team-member .team-info { 
-  background: #222222;
+  /*background: #222222;*/
   color: #BBBBBB;
   padding: 7px 0;
   border-top: 2px solid #fff;
@@ -882,11 +882,11 @@ width: 100px;
 #footer {
   padding-top: 30px;
   padding-bottom: 30px;
-  color: #fff;
-  background: #222222;
+  color: #000;
+/*  background: #222222;*/
 }
 #footer a {
-  color: #fff;
+  color: #000;
 }
 #footer a:hover {
   color: red;
