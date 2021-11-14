@@ -1,4 +1,4 @@
-/*@import url(https://fonts.googleapis.com/css2?family=Raleway:400,700,500);*/
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700,500);
 /*/https://fonts.googleapis.com/css?family=Open+Sans:700,600,800,400*/
 /*<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">*/
 /*
@@ -8,7 +8,7 @@ Author URL: http://webthemez.com
 /*************************
 *******Typography******
 **************************/
-@import url('https://fonts.googleapis.com/css2?family=Raleway:400,700,500');
+/*@import url('https://fonts.googleapis.com/css2?family=Raleway:400,700,500');*/
 
 body {
   padding-top: 100px;
@@ -965,4 +965,40 @@ padding: 7px 0 0;
   align-items: center;
   height: 250px;
   
+}
+
+
+.counter
+{
+    /*background-color: #eaecf0;*/
+    text-align: center;
+}
+.employees,.customer,.design,.order
+{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+.counter-count
+{
+    font-size: 18px;
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+    color: #ffffff;
+    text-align: center;
+    line-height: 140px;
+    width: 140px;
+    height:140px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: inline-block;
+}
+
+.employee-p,.customer-p,.order-p,.design-p
+{
+    font-size: 24px;
+    color: #000000;
+    line-height: 34px;
 }
